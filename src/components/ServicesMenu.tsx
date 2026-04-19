@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom'
+
 import { services } from '../data/siteData'
 
 type ServicesMenuProps = {
   open: boolean
-  onClose: () => void
 }
 
-export function ServicesMenu({ open, onClose }: ServicesMenuProps) {
+export function ServicesMenu({ open }: ServicesMenuProps) {
   return (
     <div className={open ? 'services-panel open' : 'services-panel'} role="dialog" aria-label="Service links">
       <p className="services-panel-title">Explore Services</p>
@@ -21,9 +20,14 @@ export function ServicesMenu({ open, onClose }: ServicesMenuProps) {
               <h3>{s.name}</h3>
               <p>{s.description}</p>
               {s.isAvailable ? (
-                <Link to={s.href} className="service-link" onClick={onClose}>
+                <a
+                  href="/skincare-analyzer"
+                  className="service-link"
+                  target="_self"
+                  rel="noopener noreferrer"
+                >
                   Open service
-                </Link>
+                </a>
               ) : (
                 <span className="service-link disabled" aria-disabled="true">
                   Coming soon

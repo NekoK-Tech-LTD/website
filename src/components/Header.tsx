@@ -74,7 +74,7 @@ export function Header() {
                 ▾
               </span>
             </button>
-            <ServicesMenu open={open} onClose={() => setOpen(false)} />
+            <ServicesMenu open={open} />
           </div>
 
           <NavLink to="/about" className="nav-link">

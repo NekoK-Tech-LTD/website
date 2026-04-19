@@ -51,9 +51,14 @@ export function HomePage() {
                 <h3>{s.name}</h3>
                 <p>{s.description}</p>
                 {s.isAvailable ? (
-                  <Link to={s.href} className="text-link">
-                    Visit service page
-                  </Link>
+                <a
+                  href="/skincare-analyzer"
+                  className="service-link"
+                  target="_self"
+                  rel="noopener noreferrer"
+                >
+                  Open service
+                </a>
                 ) : (
                   <span className="text-link muted" aria-disabled="true">
                     Service page coming soon

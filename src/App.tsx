@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
-         <Route path="/skincare-analyzer" element={<Navigate to="/skincare-analyzer" />} />
+
         
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
